@@ -5,6 +5,8 @@ public class Main {
 
         // test
 
+      //  int value = Ex1.number2Int(bal);
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number1: ");
         String number1 = scanner.nextLine();
@@ -14,14 +16,14 @@ public class Main {
         //int x = convertToDecimal(number);
        // System.out.println("The number is: " + x);
 
-        int dacimal1 = convertToDecimal(number1);
-        int dacimal2 = convertToDecimal(number2);
-        int sum = dacimal1 + dacimal2;
-         convertToSum(sum,base);
+      //  int dacimal1 = convertToDecimal(number1);
+       // int dacimal2 = convertToDecimal(number2);
+       // int sum = dacimal1 + dacimal2;
+      //   convertToSum(sum,base);
     }
 
 
-    public static int convertToDecimal(String number) {
+    /*public static int convertToDecimal(String number) {
         int result = 0; // התוצאה
         int power = 1;  // המעריך (הכח של הבסיס)
 
@@ -73,8 +75,8 @@ public class Main {
 
 //@test
 //public void testconvertToDecimal() {
-
-//}
+*/
+}
 
 
 
