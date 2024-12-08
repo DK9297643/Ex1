@@ -24,15 +24,26 @@ public class Ex1 {
 
         int result = 0; // התוצאה
         int power = 1;  // המעריך (הכח של הבסיס)
-
+        int number ;
         // עוברים על כל ספרה במחרוזת מהסוף להתחלה
         if (!num.contains("b"))
-            return -1;
+            for (int i=0; i<num.length(); i++) {
+                if ((num.charAt(i) >= '0' && num.charAt(i) <= '9')){
+                     number =  Integer.valueOf(num);
+                    return number;
+            }else {
+                    return -1;
+                }
+            }
         int bIndex = num.indexOf('b'); // מוצאים את המיקום של ה-"b"
         String numberPart = num.substring(0, bIndex);  // החלק של המספר
-        String basepart = num.substring(bIndex + 1);
-        int base = Character.getNumericValue(basepart.charAt(0));
-
+        int base;
+        if (num.substring(bIndex + 1)!="") {
+            String basepart = num.substring(bIndex + 1);
+            base = charToint(basepart.charAt(0));
+        }else{
+            return -1;
+        }
 
         for (int i = numberPart.length() - 1; i >= 0; i--) {
             char digit = num.charAt(i); // לוקחים את התו בסיפור הנוכחי
@@ -76,7 +87,7 @@ public class Ex1 {
         boolean ans = true;
 
         // add your code here
-        if ((a == null) || (a.length() == 0)  || (a.indexOf(' ') != -1) || ((baseChars.indexOf(basepart) == -1) &&  (a.contains("b")))  || (a.indexOf(validChars) != -1) || ((a.contains("b")) && index < (a.length() - 2))) {
+        if ((a == null) || (a.length() == 0)  || (a.indexOf(' ') != -1) ||  ((baseChars.indexOf(basepart) == -1) &&  (a.contains("b"))) || ((a.contains("b")) && (a.length()<3) || (a.indexOf(validChars) != -1) || ((a.contains("b")) && index < (a.length() - 2)))) {
            return  false;
         }
         if (!(a.contains("b")))
@@ -85,11 +96,17 @@ public class Ex1 {
                 return false;
             }
 
-        }
+        } if ((a.contains("b")))
+            for (int i=0; i<a.length(); i++) {
+                if (!(a.charAt(i) >= '0' && a.charAt(i) <= '9' || a.charAt(i) >= 'A' && a.charAt(i) <= 'G')){
+                    return false;
+                }
+
+            }
 
 
-
-        for (int i = 0; i < a.length() - 2; i++) {
+        if ((a.contains("b")))
+            for (int i = 0; i < a.length() - 2; i++) {
             char digit = a.charAt(i);
             int digitValue = charToint(digit);
             if (digitValue >= lustValue)
@@ -181,10 +198,10 @@ public class Ex1 {
             // add your code here
             for (int i = 1; i < arr.length; i++){
             if (number2Int(arr[i]) > max) {
-                max = arr[i].length();
+                max = number2Int(arr[i])  ;
                 ans = i;
-            }else return ans; {
-
+            }else max = number2Int(arr[0]) ; {
+                    ans = i;
             }
             }
             ////////////////////
