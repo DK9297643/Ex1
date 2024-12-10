@@ -75,6 +75,9 @@ public class Ex1 {
      * @return true iff the given String is in a number format
      */
     public static boolean isNumber(String a) {
+        if((a == null) || (a.isEmpty()) ){
+            return false;
+        }
         int index = a.indexOf('b');
         String notBcontain = "0123456789";
         String validChars = "0123456789ABCDEFG";
@@ -87,7 +90,7 @@ public class Ex1 {
         boolean ans = true;
 
         // add your code here
-        if ((a == null) || (a.length() == 0)  || (a.indexOf(' ') != -1) ||  ((baseChars.indexOf(basepart) == -1) &&  (a.contains("b"))) || ((a.contains("b")) && (a.length()<3) || (a.indexOf(validChars) != -1) || ((a.contains("b")) && index < (a.length() - 2)))) {
+        if ((a.indexOf(' ') != -1) ||  ((!baseChars.contains(basepart)) &&  (a.contains("b"))) || ((a.contains("b")) && (a.length()<3) || (a.contains(validChars)) || ((a.contains("b")) && index < (a.length() - 2)))) {
            return  false;
         }
         if (!(a.contains("b")))
@@ -98,7 +101,7 @@ public class Ex1 {
 
         } if ((a.contains("b")))
             for (int i=0; i<a.length(); i++) {
-                if (!(a.charAt(i) >= '0' && a.charAt(i) <= '9' || a.charAt(i) >= 'A' && a.charAt(i) <= 'G')){
+                if (!(a.charAt(i) >= '0' && a.charAt(i) <= '9' || a.charAt(i) >= 'A' && a.charAt(i) <= 'G' || a.charAt(i)=='b')) {
                     return false;
                 }
 

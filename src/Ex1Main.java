@@ -41,7 +41,7 @@ public class Ex1Main {
                                 String number2 = String.valueOf(dacimal2);
                                 String sum = Ex1.int2Number(sum1, base);
                                 String multi = Ex1.int2Number(multi1, base);
-                                System.out.println(num1 + " + " + num2 + " 12= " + sum);
+                                System.out.println(num1 + " + " + num2 + " = " + sum);
                                 System.out.println(num1 + " * " + num2 + " = " + multi);
                                 boolean check = Ex1.equals(num1, num2);
                                 //System.out.println(check);
