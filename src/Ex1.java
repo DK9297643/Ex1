@@ -12,6 +12,7 @@
  */
 public class Ex1 {
 
+    //test
     /**
      * Convert the given number (num) to a decimal representation (as int).
      * It the given number is not in a valid format returns -1.
