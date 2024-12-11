@@ -23,10 +23,10 @@ public class Ex1 {
     public static int number2Int(String num) {
         //int ans = -1;
 
-        int result = 0; // התוצאה
-        int power = 1;  // המעריך (הכח של הבסיס)
+        int result = 0;
+        int power = 1;
         int number ;
-        // עוברים על כל ספרה במחרוזת מהסוף להתחלה
+
         if (!num.contains("b"))
             for (int i=0; i<num.length(); i++) {
                 if ((num.charAt(i) >= '0' && num.charAt(i) <= '9')){
@@ -36,8 +36,8 @@ public class Ex1 {
                     return -1;
                 }
             }
-        int bIndex = num.indexOf('b'); // מוצאים את המיקום של ה-"b"
-        String numberPart = num.substring(0, bIndex);  // החלק של המספר
+        int bIndex = num.indexOf('b'); //
+        String numberPart = num.substring(0, bIndex);
         int base;
         if (num.substring(bIndex + 1)!="") {
             String basepart = num.substring(bIndex + 1);
@@ -47,22 +47,22 @@ public class Ex1 {
         }
 
         for (int i = numberPart.length() - 1; i >= 0; i--) {
-            char digit = num.charAt(i); // לוקחים את התו בסיפור הנוכחי
+            char digit = num.charAt(i);
             int digitValue;
 
-            // אם מדובר בספרה (0-9)
+
             if (digit >= '0' && digit <= '9') {
-                digitValue = Character.digit(digit, 16); // המרה לערך מספרי
-            }
-            // אם מדובר באות (A-G)
-            else {
                 digitValue = Character.digit(digit, 16);
-                ; // המרה לערך מספרי (A=10, B=11, ...)
             }
 
-            // מחשבים את הערך המבוקש
+            else {
+                digitValue = Character.digit(digit, 16);
+
+            }
+
+
             result += digitValue * power;
-            power = power * base;  // מכפילים בבסיס
+            power = power * base;
         }
 
         return result;
@@ -139,10 +139,10 @@ public class Ex1 {
             n = num % base;
 
             if (n < 10) {
-                // מוסיפים את השארית כמספר (0-9)
+
                 ans = (char) ('0' + n) + ans;
             } else {
-                // מוסיפים את השארית כאותיות (a-z) עבור בסיסים גדולים מ-10
+
                 ans = (char) ('A' + n - 10) + ans;
             }
             num = num / base;
@@ -153,10 +153,10 @@ public class Ex1 {
        // if (num > 16 || num <= 0 || num == 'A' ||)
 
             if (base < 10) {
-                // מוסיפים את השארית כמספר (0-9)
+
                 ans += "b" + base;
             } else {
-                // מוסיפים את השארית כאותיות (a-z) עבור בסיסים גדולים מ-10
+
                 ans += "b" + (char) ('A' + base - 10);
             }
 
@@ -165,8 +165,7 @@ public class Ex1 {
 
         return ans;
     }
-            //ans = (char) ('b' + base) +ansף
-            ////////////////////
+
 
 
 
