@@ -19,7 +19,7 @@ Validates if a given string represents a valid number in the supported base form
 Converts a given decimal number to its representation in a specified base.
 - **Input:**
   - `num` - the decimal number.
-  - `base` - the target base (between 2 and 9 or 'A' and 'G'(If the base is greater than 9)).
+  - `base` - the target base (between 2 and 9 or 'A' and 'G'(if the base is greater than 9)).
 - **Output:** A string representing the number in the specified base or an empty string for invalid input.
 
 ### 4. `equals(String n1, String n2)`
