@@ -7,7 +7,7 @@ This project implements utilities for working with numbers in various bases (fro
 
 ### 1. `number2Int(String num)`
 Converts a given number from a string representation in a specific base to its decimal (base 10) equivalent.
-- **Input:** `num` - a string in the format "numberbbase" (e.g., `101b2`, `1A3b16`).
+- **Input:** `num` - a string in the format "number-b-base" (e.g., `101b2`, `1A3b16`).
 - **Output:** Decimal value of the number or `-1` if the format is invalid.
 
 ### 2. `isNumber(String a)`
@@ -19,7 +19,7 @@ Validates if a given string represents a valid number in the supported base form
 Converts a given decimal number to its representation in a specified base.
 - **Input:**
   - `num` - the decimal number.
-  - `base` - the target base (between 2 and 16).
+  - `base` - the target base (between 2 and 9 or 'A' and 'G'(if the base is greater than 9)).
 - **Output:** A string representing the number in the specified base or an empty string for invalid input.
 
 ### 4. `equals(String n1, String n2)`
@@ -48,11 +48,9 @@ Converts a character representing a digit or letter in a specific base to its in
 
 ## Examples
 - `number2Int("101b2")` → `5`
-- `isNumber("1A3b16")` → `true`
+- `isNumber("1A3bG")` → `true`
 - `int2Number(10, 2)` → `"1010b2"`
-- `equals("101b2", "5b10")` → `true`
-- `maxIndex(["101b2", "A1b16", "15b10"])` → `1`
+- `equals("101b2", "5bA")` → `true`
+- `maxIndex(["101b2", "A1bG", "15bA"])` → `1`
 
-## Notes
-- The functions assume valid input formats where not explicitly validated.
-- Base values are restricted to `[2,16]`.
+
