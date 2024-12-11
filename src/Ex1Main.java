@@ -18,7 +18,6 @@ public class Ex1Main {
                 int dacimal1 = Ex1.number2Int(num1);
                 boolean n1 = Ex1.isNumber(num1);
 
-
                 if (n1 == true) {
                     System.out.println("num1= " + num1 + " is number :" + n1 + ", value: " + dacimal1);
 

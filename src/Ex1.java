@@ -135,6 +135,10 @@ public class Ex1 {
         String ans = "";
         // add your code here
         int n = 0;
+        if (num==0) {
+           ans = "0";
+        }
+
         while (num != 0) {
             n = num % base;
 
