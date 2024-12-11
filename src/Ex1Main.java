@@ -64,11 +64,7 @@ public class Ex1Main {
                     }
 
 
-                    //  if (!num1.equals("quit")) {
 
-
-                    // }  // String y = Ex1.int2Number(sum,base);
-                    //  System.out.println(y);
 
 
 

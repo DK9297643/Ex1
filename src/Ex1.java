@@ -21,7 +21,7 @@ public class Ex1 {
      * @return
      */
     public static int number2Int(String num) {
-        //int ans = -1;
+
 
         int result = 0;
         int power = 1;
@@ -67,7 +67,7 @@ public class Ex1 {
 
         return result;
     }
-    //return ans;
+
 
     /**
      * This static function checks if the given String (g) is in a valid "number" format.
@@ -85,14 +85,16 @@ public class Ex1 {
         String baseChars = "23456789ABCDEFG";
         char lastChar = a.charAt(a.length() - 1);
         String basepart = a.substring(index + 1);
-       // String numberPart = a.substring(0, index);
-       // int value = Integer.parseInt(a);
         int lustValue = charToint(lastChar);
         boolean ans = true;
 
-        // add your code here
 
 
+        // The if statement checks the following:
+        //If the string contains a space (a.indexOf(' ') != -1),
+        //Or if the string contains the character 'b' and its length is less than 3 (a.contains("b") && a.length() < 3),
+        //Or if the string contains the character 'b' and there are at least two characters after it (a.contains("b") && index < (a.length() - 2)).
+        //If any of these conditions are true, the statement will evaluate to false.
         if ((a.indexOf(' ') != -1) ||   ((a.contains("b")) && (a.length()<3) ||  ((a.contains("b")) && index < (a.length() - 2))))  {
            return  false;
         }
@@ -104,6 +106,8 @@ public class Ex1 {
 
         } if ((a.contains("b")))
             for (int i=0; i<a.length(); i++) {
+                // The if statement checks the following:
+                // If the string contains 'b' but includes characters other than the allowed ones, return false.
                 if (!(a.charAt(i) >= '0' && a.charAt(i) <= '9' || a.charAt(i) >= 'A' && a.charAt(i) <= 'G' || a.charAt(i)=='b')) {
                     return false;
                 }
@@ -133,7 +137,7 @@ public class Ex1 {
      */
     public static String int2Number(int num, int base) {
         String ans = "";
-        // add your code here
+
         int n = 0;
         if (num==0) {
            ans = "0";
@@ -154,7 +158,7 @@ public class Ex1 {
         }
         num = num / base;
 
-       // if (num > 16 || num <= 0 || num == 'A' ||)
+
 
             if (base < 10) {
 
@@ -204,7 +208,7 @@ public class Ex1 {
         public static int maxIndex(String[] arr) {
             int ans = 0;
             int max = number2Int(arr[0]) ;
-            // add your code here
+
             for (int i = 1; i < arr.length; i++){
             if (number2Int(arr[i]) > max) {
                 max = number2Int(arr[i])  ;
@@ -213,7 +217,7 @@ public class Ex1 {
                     ans = i;
             }
             }
-            ////////////////////
+
             return ans;
         }
        public static int charToint(char t ) {
