@@ -53,6 +53,4 @@ Converts a character representing a digit or letter in a specific base to its in
 - `equals("101b2", "5bA")` → `true`
 - `maxIndex(["101b2", "A1bG", "15bA"])` → `1`
 
-## Notes
-- The functions assume valid input formats where not explicitly validated.
-- Base values are restricted to `[2,16]`.
+
