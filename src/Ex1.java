@@ -92,7 +92,7 @@ public class Ex1 {
 
         // The if statement checks the following:
         //If the string contains a space (a.indexOf(' ') != -1),
-        //Or if the string contains the character 'b' and its length is less than 3 (a.contains("b") && a.length() < 3),
+        //Or if the string contains the character 'b' and its length is less than 3 (a.contains("b") && a.length() < 3)
         //Or if the string contains the character 'b' and there are at least two characters after it (a.contains("b") && index < (a.length() - 2)).
         //If any of these conditions are true, the statement will evaluate to false.
         if ((a.indexOf(' ') != -1) ||   ((a.contains("b")) && (a.length()<3) ||  ((a.contains("b")) && index < (a.length() - 2))))  {
