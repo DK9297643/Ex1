@@ -90,7 +90,9 @@ public class Ex1 {
         boolean ans = true;
 
         // add your code here
-        if ((a.indexOf(' ') != -1) ||  ((!baseChars.contains(basepart)) &&  (a.contains("b"))) || ((a.contains("b")) && (a.length()<3) || (a.contains(validChars)) || ((a.contains("b")) && index < (a.length() - 2)))) {
+
+
+        if ((a.indexOf(' ') != -1) ||   ((a.contains("b")) && (a.length()<3) ||  ((a.contains("b")) && index < (a.length() - 2))))  {
            return  false;
         }
         if (!(a.contains("b")))

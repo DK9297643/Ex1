@@ -27,7 +27,7 @@ public class Ex1Test {
         assertEquals(419, decimalValue);
         String decimalNum = "123bA"; // Decimal representation
         decimalValue = Ex1.number2Int(decimalNum);
-        assertEquals(123, decimalValue, "Decimal to decimal conversion failed.");
+        assertEquals(123, decimalValue);
         assertFalse(Ex1.equals(decimalNum,hexNum));
     }
 
@@ -63,6 +63,20 @@ public class Ex1Test {
         assertEquals(3, Ex1.maxIndex(arr3));
 
     }
+    @Test
+    void equalsTest() {
+       String num1 = "3F2bG";
+       String num2 = "1010bA";
+       assertTrue(Ex1.equals(num1,num2));
+
+    }
+
+
+
+
+
+
+
     @Test
     void charToint() {
         assertEquals(10, Ex1.charToint('A'));
