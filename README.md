@@ -6,8 +6,8 @@ This project implements utilities for working with numbers in various bases (fro
 ## Functionality
 
 ### 1. `number2Int(String num)`
-Converts a given number from a string representation in a specific base to its decimal (base 10) equivalent.
-- **Input:** `num` - a string in the format "number-b-base" (e.g., `101b2`, `1A3b16`).
+Converts a given number from a string representation in a specific base(above 9 its must be in letters e.g `1A3bG`) to its decimal (base 10) equivalent.
+- **Input:** `num` - a string in the format "number-b-base" (e.g., `101b2`, `573bC`).
 - **Output:** Decimal value of the number or `-1` if the format is invalid.
 
 ### 2. `isNumber(String a)`
