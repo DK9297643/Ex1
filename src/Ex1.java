@@ -156,7 +156,7 @@ public class Ex1 {
             num = num / base;
 
         }
-        num = num / base;
+
 
 
 
@@ -169,7 +169,7 @@ public class Ex1 {
             }
 
 
-        num = num / base;
+
 
         return ans;
     }
@@ -183,6 +183,7 @@ public class Ex1 {
          * @param n2 second number
          * @return true iff the two numbers have the same values.
          */
+        //The equals function checks if two strings (n1 and n2) are equal when converted to numbers using the number2Int function.
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
             // add your code here
@@ -220,7 +221,11 @@ public class Ex1 {
 
             return ans;
         }
-       public static int charToint(char t ) {
+        //The charToint function converts a character to its corresponding integer value based on the following rules:
+        //If the character is a digit ('0' to '9') it returns the numeric value of the digit.
+        //If the character is an uppercase letter ('A' to 'G'), it returns the value as a number starting from 10 (e.g., 'A' = 10).
+        //For any other character it returns -1.
+         public static int charToint(char t ) {
 
             if(t >= '0' && t <= '9') {
                 return t - '0';
